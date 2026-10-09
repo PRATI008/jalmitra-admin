@@ -1,0 +1,83 @@
+.login-main-outer{
+    display: flex;
+    height: 400px;
+    width: 850px;
+    margin: 50px auto;
+    border-radius: 20px;
+   
+}
+
+
+.login-left-outer{
+    height: 400px;
+    width: 400px;
+     background: url("./logo.png");
+     background-repeat: no-repeat;
+     background-position: center;
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+    
+    /* background-color: white; */
+    box-shadow: 2px 3px 5px rgb(16, 111, 138);
+    /* border-radius: 20px; */
+    padding: 20px;
+}
+
+
+.login-right-outer{
+    height: 400px;
+    width: 400px;
+   border-top-right-radius: 20px;
+     border-bottom-right-radius: 20px;
+    background-color: white;
+    box-shadow: 2px 3px 5px rgb(16, 111, 138);
+    /* border-radius: 20px; */
+    padding: 20px;
+}
+
+.Login-heading{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 35px;
+}
+.login-card{
+    /* display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center; */
+    margin-top: 30px;
+}
+.login-card label{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: darkslategray;
+    
+}
+.login-card input{
+    height: 50px;
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid rgb(86, 174, 233) ;
+    padding: 10px;
+    display: block;
+    margin-bottom: 30px;
+    font-size: 18px;
+
+}
+.login-btn{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    
+}
+.login-btn button{
+height: 50px;
+width: 80%;
+border-radius: 10px;
+color: white;
+background-color: blue;
+border: none;
+font-size: 20px;
+}

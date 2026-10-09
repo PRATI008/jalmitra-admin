@@ -1,0 +1,335 @@
+
+.admin-dashboard {
+    width: 100%;
+    color: #29485a;
+}
+
+.dashboard-page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.dashboard-page-heading h2 {
+    margin: 0;
+    color: #174d68;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.dashboard-page-heading p {
+    margin: 7px 0 0;
+    color: #8497a5;
+    font-size: 13px;
+}
+
+.dashboard-date {
+    padding: 9px 14px;
+    border: 1px solid #dceaf1;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #357b9c;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.dashboard-card-outer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.dashboard-card {
+    min-width: 0;
+    min-height: 190px;
+    padding: 23px;
+    border: 1px solid #e5edf3;
+    border-radius: 13px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(31, 75, 96, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(31, 75, 96, 0.1);
+}
+
+.dashboard-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.dashboard-card-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 21px;
+}
+
+.users-card .dashboard-card-icon {
+    background: #e2f3ff;
+    color: #218bd0;
+}
+
+.suppliers-card .dashboard-card-icon {
+    background: #dcf8ef;
+    color: #159b78;
+}
+
+.products-card .dashboard-card-icon {
+    background: #eee8ff;
+    color: #7856d8;
+}
+
+.orders-card .dashboard-card-icon {
+    background: #fff0d8;
+    color: #df9827;
+}
+
+.delivered-card .dashboard-card-icon {
+    background: #ffe8eb;
+    color: #dc6575;
+}
+
+.pending-card .dashboard-card-icon {
+    background: #e1f8fb;
+    color: #1599ad;
+}
+
+.dashboard-card-change {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #14a678;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard-card-details {
+    margin-top: 17px;
+}
+
+.dashboard-card-title {
+    margin: 0 0 6px;
+    color: #708493;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.dashboard-card-details h2 {
+    margin: 0;
+    color: #164b63;
+    font-size: 29px;
+    font-weight: 750;
+    letter-spacing: 0.2px;
+}
+
+.dashboard-card-caption {
+    display: block;
+    margin-top: 8px;
+    color: #9aaab4;
+    font-size: 11px;
+}
+
+.dashboard-bottom-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.dashboard-info-panel {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #e5edf3;
+    border-radius: 13px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(31, 75, 96, 0.04);
+}
+
+.dashboard-panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.dashboard-panel-heading h3,
+.dashboard-welcome-panel h3 {
+    margin: 0;
+    color: #1b5069;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.dashboard-panel-heading p {
+    margin: 5px 0 0;
+    color: #8a9ca8;
+    font-size: 12px;
+}
+
+.dashboard-panel-heading > svg {
+    color: #2389b8;
+    font-size: 22px;
+}
+
+.dashboard-summary-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #edf2f6;
+    color: #738895;
+    font-size: 13px;
+}
+
+.dashboard-summary-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.dashboard-summary-row strong {
+    color: #1d5874;
+    font-size: 14px;
+}
+
+.dashboard-welcome-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dashboard-welcome-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17px;
+    border-radius: 13px;
+    background: #e3f5fb;
+    color: #1688ae;
+    font-size: 22px;
+}
+
+.dashboard-welcome-panel p {
+    max-width: 350px;
+    margin: 10px 0 18px;
+    color: #7d929f;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.dashboard-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border-radius: 7px;
+    background: #e9f8f0;
+    color: #21845e;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.dashboard-status span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #24ae79;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-card-outer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .dashboard-bottom-section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .dashboard-page-heading {
+        align-items: flex-start;
+    }
+
+    .dashboard-page-heading h2 {
+        font-size: 19px;
+    }
+
+    .dashboard-page-heading p {
+        max-width: 260px;
+        line-height: 1.6;
+    }
+
+    .dashboard-date {
+        display: none;
+    }
+
+    .dashboard-card-outer {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .dashboard-card {
+        min-height: 165px;
+        padding: 15px;
+        border-radius: 11px;
+    }
+
+    .dashboard-card-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 17px;
+        border-radius: 10px;
+    }
+
+    .dashboard-card-change {
+        font-size: 10px;
+    }
+
+    .dashboard-card-details {
+        margin-top: 15px;
+    }
+
+    .dashboard-card-title {
+        font-size: 12px;
+    }
+
+    .dashboard-card-details h2 {
+        font-size: 24px;
+    }
+
+    .dashboard-card-caption {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+
+    .dashboard-info-panel {
+        padding: 17px;
+    }
+
+    .dashboard-welcome-panel h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .dashboard-card-outer {
+        grid-template-columns: 1fr;
+    }
+}

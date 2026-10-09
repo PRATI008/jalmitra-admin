@@ -1,0 +1,348 @@
+
+* {
+    box-sizing: border-box;
+}
+
+.dashboardLayout-outer {
+    display: flex;
+    min-height: 100vh;
+    background: #f3f7fb;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #234457;
+}
+
+.dashboardLayout-sidebar {
+    width: 255px;
+    min-width: 255px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #073e43 0%, #052f35 100%);
+    color: #ffffff;
+    transition: width 0.25s ease, min-width 0.25s ease;
+    overflow: hidden;
+}
+
+.dashboardLayout-sidebar.sidebar-closed {
+    width: 76px;
+    min-width: 76px;
+}
+
+.dashboard-top {
+    min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.sidebar-logo {
+    width: 54px;
+    height: 54px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.96);
+}
+
+.sidebar-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sidebar-brand-text h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 750;
+    letter-spacing: 0.3px;
+}
+
+.sidebar-brand-text p {
+    margin: 4px 0 0;
+    color: #a8d7dc;
+    font-size: 12px;
+}
+
+.sidebar-section-title {
+    min-height: 43px;
+    padding: 20px 22px 8px;
+    color: #91b8bd;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 8px 12px;
+}
+
+.sidebar-menu .navLink {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 15px;
+    border-radius: 9px;
+    color: #d3e5e7;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-menu .navLink:hover {
+    background: rgba(255, 255, 255, 0.09);
+    color: #ffffff;
+}
+
+.sidebar-menu .navLink.active {
+    background: #138b85;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    font-weight: 650;
+}
+
+.sidebar-menu-icon {
+    width: 20px;
+    min-width: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 16px 12px 22px;
+}
+
+.sidebar-bottom button {
+    width: 100%;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.09);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.sidebar-bottom button:hover {
+    background: #c94f4f;
+}
+
+.sidebar-bottom button svg {
+    font-size: 17px;
+}
+
+.dashboardLayout-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboardLayout-header {
+    min-height: 88px;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #e6edf3;
+    box-shadow: 0 2px 8px rgba(26, 69, 91, 0.04);
+}
+
+.header-first {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    min-width: 0;
+}
+
+.dashboard-toggle-btn {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background: #edf5f9;
+    color: #145d7d;
+    font-size: 22px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dashboard-toggle-btn:hover {
+    background: #dceef7;
+}
+
+.dashboard-welcome h1 {
+    margin: 0;
+    color: #164b66;
+    font-size: 23px;
+    font-weight: 750;
+}
+
+.dashboard-welcome p {
+    margin: 5px 0 0;
+    color: #8497a5;
+    font-size: 12px;
+}
+
+.dashboard-Layout-Admin {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding-left: 18px;
+    border-left: 1px solid #e5edf2;
+}
+
+.dashboard-admin-avatar {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e2f3fa;
+    color: #167ca6;
+    font-size: 19px;
+}
+
+.dashboard-admin-info h4 {
+    margin: 0;
+    color: #2b4b5d;
+    font-size: 13px;
+}
+
+.dashboard-admin-info p {
+    margin: 4px 0 0;
+    color: #8a9ca8;
+    font-size: 11px;
+}
+
+.dashboardLayout-content {
+    flex: 1;
+    min-width: 0;
+    padding: 26px;
+}
+
+.dashboardLayout-sidebar.sidebar-closed .dashboard-top {
+    padding: 12px 8px;
+}
+
+.dashboardLayout-sidebar.sidebar-closed .sidebar-menu {
+    padding: 8px 10px;
+}
+
+.dashboardLayout-sidebar.sidebar-closed .sidebar-menu .navLink {
+    justify-content: center;
+    padding: 0;
+}
+
+.dashboardLayout-sidebar.sidebar-closed .sidebar-bottom {
+    padding: 14px 10px 22px;
+}
+
+@media (max-width: 768px) {
+    .dashboardLayout-sidebar {
+        width: 230px;
+        min-width: 230px;
+    }
+
+    .dashboardLayout-sidebar.sidebar-closed {
+        width: 0;
+        min-width: 0;
+    }
+
+    .dashboardLayout-sidebar.sidebar-closed .dashboard-top,
+    .dashboardLayout-sidebar.sidebar-closed .sidebar-menu,
+    .dashboardLayout-sidebar.sidebar-closed .sidebar-bottom,
+    .dashboardLayout-sidebar.sidebar-closed .sidebar-section-title {
+        display: none;
+    }
+
+    .dashboardLayout-header {
+        min-height: 75px;
+        padding: 12px 15px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 19px;
+    }
+
+    .dashboard-welcome p {
+        font-size: 11px;
+    }
+
+    .dashboard-admin-info {
+        display: none;
+    }
+
+    .dashboard-Layout-Admin {
+        padding-left: 12px;
+    }
+
+    .dashboardLayout-content {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboardLayout-header {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .header-first {
+        gap: 9px;
+    }
+
+    .dashboard-toggle-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 19px;
+    }
+
+    .dashboard-welcome h1 {
+        font-size: 16px;
+    }
+
+    .dashboard-welcome p {
+        max-width: 190px;
+        line-height: 1.4;
+    }
+
+    .dashboard-admin-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    .dashboardLayout-content {
+        padding: 12px;
+    }
+}
