@@ -24,8 +24,16 @@
   font-size: 14px;
 }
 
-.subscription-heading-icon {
-  width: 52px;
+.subscription-heading-icon>button {
+  padding: 10px;
+  border: none;
+  font-size: 20px;
+  border: #173b40;
+  border-radius: 10px;
+  color: white;
+  background-color: #168b83;
+
+  /* width: 52px;
   height: 52px;
   display: flex;
   align-items: center;
@@ -33,7 +41,28 @@
   border-radius: 15px;
   background: #dff5f2;
   color: #087f78;
-  font-size: 23px;
+  font-size: 23px; */
+}
+.duration{
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+}
+.submit{
+  margin-top: 10px;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+  background-color:#173b40;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+
+}
+.features{
+  width: 100%;
+  border-radius: 8px;
 }
 
 .subscription-stats {

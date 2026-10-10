@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import DashboardLayout from "../Components/DashboardLayout";
+import Modal from 'react-bootstrap/Modal'
+import Table from 'react-bootstrap/Table'
+import { IoClose, IoMenu } from "react-icons/io5";
 import {
   FaCreditCard,
   FaCheckCircle,
@@ -11,6 +14,7 @@ import "../Pages/CSS/Subscription.css";
 
 const Subscription = () => {
   const [search, setSearch] = useState("");
+  const [modalShow, setModalShow] = useState(false)
 
   const [plans, setPlans] = useState([
     {
@@ -44,9 +48,9 @@ const Subscription = () => {
       previous.map((plan) =>
         plan.id === id
           ? {
-              ...plan,
-              status: plan.status === "Active" ? "Inactive" : "Active",
-            }
+            ...plan,
+            status: plan.status === "Active" ? "Inactive" : "Active",
+          }
           : plan
       )
     );
@@ -76,9 +80,61 @@ const Subscription = () => {
           </div>
 
           <div className="subscription-heading-icon">
-            <FaCreditCard />
+            <button onClick={() => setModalShow(true)}>Create Subscription</button>
+            {/* <FaCreditCard /> */}
           </div>
         </div>
+        <Modal show={modalShow} centered>
+          <Modal.Header className="d-flex justify-content-between align-items-center">
+            <h3 className="mb-0">Create Subscripiton</h3>
+            <button type="button" className="btn btn-dark p-2" onClick={() => setModalShow(false)}>
+              <IoClose />
+            </button>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="mb-3">
+              <label className="form-Plan">Plan Name</label>
+              <input type="text" className="form-control" placeholder="Enter Your Plan" />
+              <label>Price</label>
+              <input type="text" className="form-control" placeholder="Enter Price"/>
+              {/* <label>Duration</label> */}
+             <select className="duration">
+              <option>Duration Type..</option>
+              <option> 1 month</option>
+              <option>3 Month</option>
+              <option>6 Month</option>
+             </select><br/>
+              <label>Features</label>
+              <textarea className="features">
+
+              </textarea>
+              {/* <input type="text" className="form-control" placeholder="Enter Features"/> */}
+              <button className="submit">Submit</button>
+            </div>
+          </Modal.Body>
+
+        </Modal>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div className="subscription-stats">
           <div className="subscription-stat-card">
@@ -173,9 +229,8 @@ const Subscription = () => {
 
                     <td>
                       <button
-                        className={`subscription-action ${
-                          plan.status === "Active" ? "deactivate" : "activate"
-                        }`}
+                        className={`subscription-action ${plan.status === "Active" ? "deactivate" : "activate"
+                          }`}
                         onClick={() => toggleStatus(plan.id)}
                       >
                         <FaEdit />
