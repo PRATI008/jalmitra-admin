@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashboardLayout from "../Components/DashboardLayout";
+import axios from "axios";
+import Table from 'react-bootstrap/Table'
+import Modal from 'react-bootstrap/Modal'
+import { IoClose, IoMenu } from "react-icons/io5";
 import {
   FaSearch,
   FaStore,
@@ -13,44 +17,24 @@ import "../Pages/CSS/Supplier.css";
 const Supplier = () => {
   const [search, setSearch] = useState("");
 
-  const [suppliers, setSuppliers] = useState([
-    {
-      id: 1,
-      name: "Amit Kumar",
-      business: "Aqua Water Supply",
-      email: "amit@gmail.com",
-      mobile: "9876543210",
-      date: "05 Oct 2026",
-      status: "Approved",
-    },
-    {
-      id: 2,
-      name: "Rohit Singh",
-      business: "Fresh Drop Water",
-      email: "rohit@gmail.com",
-      mobile: "9876543211",
-      date: "06 Oct 2026",
-      status: "Pending",
-    },
-    {
-      id: 3,
-      name: "Priya Verma",
-      business: "Pure Water Service",
-      email: "priya@gmail.com",
-      mobile: "9876543212",
-      date: "07 Oct 2026",
-      status: "Approved",
-    },
-    {
-      id: 4,
-      name: "Ankit Yadav",
-      business: "Blue Drop Supply",
-      email: "ankit@gmail.com",
-      mobile: "9876543213",
-      date: "08 Oct 2026",
-      status: "Rejected",
-    },
-  ]);
+  const [suppliers, setSuppliers] = useState([]);
+  const [modalShow,setModalShow] = useState(false)
+
+  const fetchSuppliers  = async()=>{
+    try{
+      const res = await axios.get("./Data/suppliers.json")
+      setSuppliers(res.data)
+      console.log(res);
+      
+    }catch(error){
+      console.log(error);
+      
+    }
+  }
+
+  useEffect(()=>{
+    fetchSuppliers()
+  },[])
 
   const updateStatus = (id, status) => {
     setSuppliers((previous) =>
@@ -77,6 +61,10 @@ const Supplier = () => {
   return (
     <DashboardLayout>
       <div className="supplier-page">
+         <div className="supplier-Modal">
+                <h3>Add Users</h3>
+                <button onClick={()=>setModalShow(true)}>Create </button>
+            </div>
         <div className="supplier-heading">
           <div>
             <h2>Supplier Management</h2>
@@ -139,7 +127,7 @@ const Supplier = () => {
           </div>
 
           <div className="supplier-table-wrapper">
-            <table className="supplier-table">
+            <Table className="supplier-table" striped bordered>
               <thead>
                 <tr>
                   <th>Supplier</th>
@@ -244,10 +232,33 @@ const Supplier = () => {
                   </tr>
                 )}
               </tbody>
-            </table>
+            </Table>
           </div>
         </div>
       </div>
+      <Modal show={modalShow}
+    onHide={() => setModalShow(false)}
+    size="lg"
+    aria-labelledby="contained-modal-title-vcenter"
+    centered
+    backdrop="static"
+    keyboard={false}
+    dialogClassName="users-create-modal">
+        <Modal.Header className="d-flex justify-content-between align-items-center">
+    <h3 className="mb-0">Create User</h3>
+
+    <button
+        type="button"
+        className="btn btn-dark p-2"
+        onClick={() => setModalShow(false)}
+    >
+        <IoClose />
+    </button>
+</Modal.Header>
+        <Modal.Body>
+
+        </Modal.Body>
+      </Modal>
     </DashboardLayout>
   );
 };

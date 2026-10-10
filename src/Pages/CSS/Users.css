@@ -261,17 +261,17 @@
     gap: 6px;
     padding: 6px 9px;
     border-radius: 20px;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .status-active {
-    background: #e6f8ef;
+    /* background: #e6f8ef; */
     color: #16875d;
 }
 
 .status-blocked {
-    background: #ffebed;
+    /* background: #ffebed; */
     color: #c94e5b;
 }
 
@@ -384,5 +384,76 @@
     .users-table th,
     .users-table td {
         padding: 13px;
+    }
+}
+
+
+/* modal */
+.user-Modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+    box-shadow: 0px 0px 10px rgb(227, 225, 225);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+.user-Modal button{
+    height: 38px;
+    width: 140px;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.user-Modal button:hover{
+    background-color: #1b5069;
+}
+
+.users-create-modal {
+    width: calc(100% - 30px);
+    max-width: 600px;
+    margin: 15px auto;
+    display: flex;
+}
+
+.users-create-modal .modal-content {
+    width: 100%;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.users-create-modal .modal-header {
+    padding: 18px 22px;
+    background: #eaf8fc;
+    border-bottom: 1px solid #d7edf3;
+}
+
+.users-create-modal .modal-body {
+    padding: 24px;
+}
+
+.users-create-modal .modal-header h3 {
+    font-size: 21px;
+    color: #064b75;
+    font-weight: 600;
+}
+
+@media (max-width: 576px) {
+    .users-create-modal {
+        margin: 10px auto;
+    }
+
+    .users-create-modal .modal-body {
+        padding: 16px;
     }
 }

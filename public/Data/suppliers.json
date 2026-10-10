@@ -1,0 +1,182 @@
+[
+  {
+    "_id": 1,
+    "name": "Amit Kumar",
+    "business": "Aqua Water Supply",
+    "email": "amit@gmail.com",
+    "mobile": "9238472947",
+    "date": "05-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 2,
+    "name": "Rahul Sharma",
+    "business": "Fresh Drop Water",
+    "email": "rahul.sharma@example.com",
+    "mobile": "9000000102",
+    "date": "06-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 3,
+    "name": "Vikas Singh",
+    "business": "Pure Life Water Supply",
+    "email": "vikas.singh@example.com",
+    "mobile": "9000000103",
+    "date": "07-Oct-2026",
+    "status": "Pending"
+  },
+  {
+    "_id": 4,
+    "name": "Sandeep Verma",
+    "business": "Crystal Water Services",
+    "email": "sandeep.verma@example.com",
+    "mobile": "9000000104",
+    "date": "08-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 5,
+    "name": "Rohit Gupta",
+    "business": "Blue Pearl Water",
+    "email": "rohit.gupta@example.com",
+    "mobile": "9000000105",
+    "date": "09-Oct-2026",
+    "status": "Rejected"
+  },
+  {
+    "_id": 6,
+    "name": "Manoj Mishra",
+    "business": "Shree Water Supplier",
+    "email": "manoj.mishra@example.com",
+    "mobile": "9000000106",
+    "date": "10-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 7,
+    "name": "Deepak Yadav",
+    "business": "Aqua Fresh Services",
+    "email": "deepak.yadav@example.com",
+    "mobile": "9000000107",
+    "date": "11-Oct-2026",
+    "status": "Pending"
+  },
+  {
+    "_id": 8,
+    "name": "Anil Patel",
+    "business": "Green Drop Water Supply",
+    "email": "anil.patel@example.com",
+    "mobile": "9000000108",
+    "date": "12-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 9,
+    "name": "Pankaj Tiwari",
+    "business": "Royal Water Agency",
+    "email": "pankaj.tiwari@example.com",
+    "mobile": "9000000109",
+    "date": "13-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 10,
+    "name": "Ajay Kumar",
+    "business": "Safe Water Point",
+    "email": "ajay.kumar@example.com",
+    "mobile": "9000000110",
+    "date": "14-Oct-2026",
+    "status": "Rejected"
+  },
+  {
+    "_id": 11,
+    "name": "Ramesh Singh",
+    "business": "Jal Amrit Water Supply",
+    "email": "ramesh.singh@example.com",
+    "mobile": "9000000111",
+    "date": "15-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 12,
+    "name": "Sunil Verma",
+    "business": "Aqua King Suppliers",
+    "email": "sunil.verma@example.com",
+    "mobile": "9000000112",
+    "date": "16-Oct-2026",
+    "status": "Pending"
+  },
+  {
+    "_id": 13,
+    "name": "Arun Srivastava",
+    "business": "Blue Wave Water Supply",
+    "email": "arun.srivastava@example.com",
+    "mobile": "9000000113",
+    "date": "17-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 14,
+    "name": "Nitin Pandey",
+    "business": "Fresh Life Water",
+    "email": "nitin.pandey@example.com",
+    "mobile": "9000000114",
+    "date": "18-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 15,
+    "name": "Sachin Maurya",
+    "business": "Shiv Shakti Water Supply",
+    "email": "sachin.maurya@example.com",
+    "mobile": "9000000115",
+    "date": "19-Oct-2026",
+    "status": "Rejected"
+  },
+  {
+    "_id": 16,
+    "name": "Vivek Chauhan",
+    "business": "Aqua Care Services",
+    "email": "vivek.chauhan@example.com",
+    "mobile": "9000000116",
+    "date": "20-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 17,
+    "name": "Kunal Sharma",
+    "business": "Crystal Drop Suppliers",
+    "email": "kunal.sharma@example.com",
+    "mobile": "9000000117",
+    "date": "21-Oct-2026",
+    "status": "Pending"
+  },
+  {
+    "_id": 18,
+    "name": "Ashish Gupta",
+    "business": "Maa Ganga Water Supply",
+    "email": "ashish.gupta@example.com",
+    "mobile": "9000000118",
+    "date": "22-Oct-2026",
+    "status": "Approved"
+  },
+  {
+    "_id": 19,
+    "name": "Varun Tiwari",
+    "business": "Daily Fresh Water",
+    "email": "varun.tiwari@example.com",
+    "mobile": "9000000119",
+    "date": "23-Oct-2026",
+    "status": "Rejected"
+  },
+  {
+    "_id": 20,
+    "name": "Prashant Mishra",
+    "business": "Aqua Star Water Supply",
+    "email": "prashant.mishra@example.com",
+    "mobile": "9000000120",
+    "date": "24-Oct-2026",
+    "status": "Approved"
+  }
+]

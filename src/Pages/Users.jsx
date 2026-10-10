@@ -1,6 +1,10 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DashboardLayout from "../Components/DashboardLayout";
+import axios from "axios";
+import Table from 'react-bootstrap/Table'
+import Modal from 'react-bootstrap/Modal'
+import { IoClose, IoMenu } from "react-icons/io5";
 import {
     FaSearch,
     FaUsers,
@@ -14,48 +18,24 @@ import "../Pages/CSS/Users.css";
 const Users = () => {
     const [search, setSearch] = useState("");
 
-    const [users, setUsers] = useState([
-        {
-            id: 1,
-            name: "Shalu Kushwaha",
-            email: "shalu@gmail.com",
-            mobile: "9876543210",
-            joined: "25 Sep 2026",
-            status: "Active"
-        },
-        {
-            id: 2,
-            name: "Pratibha Dwivedi",
-            email: "pratibha@gmail.com",
-            mobile: "8765432109",
-            joined: "27 Sep 2026",
-            status: "Active"
-        },
-        {
-            id: 3,
-            name: "Shriya Mishra",
-            email: "shriya@gmail.com",
-            mobile: "7654321098",
-            joined: "29 Sep 2026",
-            status: "Blocked"
-        },
-        {
-            id: 4,
-            name: "Riya Mishra",
-            email: "riya@gmail.com",
-            mobile: "6543210987",
-            joined: "01 Oct 2026",
-            status: "Active"
-        },
-        {
-            id: 5,
-            name: "Mahima",
-            email: "mahima@gmail.com",
-            mobile: "5432109876",
-            joined: "03 Oct 2026",
-            status: "Active"
-        }
-    ]);
+    const [users, setUsers] = useState([])
+    const [modalShow, setModalShow] = useState(false)
+
+    const fetchUsers = async()=>{
+        try{
+            const res = await axios.get("./Data/users.json")
+            setUsers(res.data)
+            console.log();
+            } catch (error){
+                console.log(error);
+                
+            }
+    }
+
+    useEffect(()=>{
+        fetchUsers()
+    },[])
+       
 
     const toggleStatus = (id) => {
         setUsers((previousUsers) =>
@@ -85,8 +65,15 @@ const Users = () => {
     ).length;
 
     return (
+       <>
         <DashboardLayout>
+           
+
             <div className="users-page">
+                 <div className="user-Modal">
+                <h3>Add Users</h3>
+                <button onClick={()=>setModalShow(true)}>Create Users</button>
+            </div>
 
                 <div className="users-page-heading">
                     <div>
@@ -152,7 +139,7 @@ const Users = () => {
                     </div>
 
                     <div className="users-table-scroll">
-                        <table className="users-table">
+                        <Table className="users-table" striped bordered>
                             <thead>
                                 <tr>
                                     <th>User</th>
@@ -231,7 +218,7 @@ const Users = () => {
                                     </tr>
                                 )}
                             </tbody>
-                        </table>
+                        </Table>
                     </div>
 
                     <div className="users-table-footer">
@@ -240,7 +227,44 @@ const Users = () => {
 
                 </div>
             </div>
+
+
+
+
+            <Modal  show={modalShow}
+    onHide={() => setModalShow(false)}
+    size="lg"
+    aria-labelledby="contained-modal-title-vcenter"
+    centered
+    backdrop="static"
+    keyboard={false}
+    dialogClassName="users-create-modal"
+>
+               <Modal.Header className="d-flex justify-content-between align-items-center">
+    <h3 className="mb-0">Create User</h3>
+
+    <button
+        type="button"
+        className="btn btn-dark p-2"
+        onClick={() => setModalShow(false)}
+    >
+        <IoClose />
+    </button>
+</Modal.Header>
+                   <Modal.Body>
+    <div className="mb-3">
+        <label className="form-label">Full Name</label>
+        <input
+            type="text"
+            className="form-control"
+            placeholder="Enter your name"
+        />
+    </div>
+</Modal.Body>
+               
+            </Modal>
         </DashboardLayout>
+       </>
     );
 };
 
