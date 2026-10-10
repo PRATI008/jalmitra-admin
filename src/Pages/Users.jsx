@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import DashboardLayout from "../Components/DashboardLayout";
 import axios from "axios";
@@ -184,8 +183,8 @@ const Users = () => {
                                                 <td>
                                                     <span
                                                         className={`users-status ${user.status === "Active"
-                                                                ? "status-active"
-                                                                : "status-blocked"
+                                                            ? "status-active"
+                                                            : "status-blocked"
                                                             }`}
                                                     >
                                                         <span className="users-status-dot"></span>
@@ -196,8 +195,8 @@ const Users = () => {
                                                 <td>
                                                     <button
                                                         className={`users-action-btn ${user.status === "Active"
-                                                                ? "block-user-btn"
-                                                                : "unblock-user-btn"
+                                                            ? "block-user-btn"
+                                                            : "unblock-user-btn"
                                                             }`}
                                                         onClick={() => toggleStatus(user.id)}
                                                     >
@@ -236,7 +235,7 @@ const Users = () => {
                     centered
                     backdrop="static"
                     keyboard={false}
-                    dialogClassName="users-create-modal"
+                    dialogClassName="users-create-modal" className="modal-container"
                 >
                     <Modal.Header className="d-flex justify-content-between align-items-center">
                         <h3 className="mb-0">Create User</h3>
@@ -251,12 +250,33 @@ const Users = () => {
                     </Modal.Header>
                     <Modal.Body>
                         <div className="mb-3">
-                            <label className="form-label">Full Name</label>
+                            <div className="row">
+                                <div className="col-sm-6">
+                                    <label className="form-label">Full Name</label>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        placeholder="Enter your name"
+                                    />
+
+                                </div>
+                                <div className="col-sm-6">
+                                    <label className="form-label">Mobile Number</label>
+                                    <input
+                                        type="number"
+                                        className="form-control"
+                                        placeholder="Enter your phone number"
+                                    />
+                                </div>
+                            </div>
+                            <label className="form-label">Joining date</label>
                             <input
-                                type="text"
+                                type="date"
                                 className="form-control"
-                                placeholder="Enter your name"
                             />
+
+                            <button className="add-user">Add User</button>
+
                         </div>
                     </Modal.Body>
 
