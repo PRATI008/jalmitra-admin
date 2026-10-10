@@ -14,13 +14,17 @@
 .dashboardLayout-sidebar {
     width: 255px;
     min-width: 255px;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background: linear-gradient(180deg, #073e43 0%, #052f35 100%);
     color: #ffffff;
     transition: width 0.25s ease, min-width 0.25s ease;
     overflow: hidden;
+    position: sticky;
+    top: 0;
+    right: 0;
+
 }
 
 .dashboardLayout-sidebar.sidebar-closed {

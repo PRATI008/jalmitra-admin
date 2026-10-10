@@ -21,7 +21,7 @@
 .supplier-table-heading p {
   margin: 0;
   color: #7b9296;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .supplier-heading-icon {
@@ -71,7 +71,7 @@
 }
 
 .supplier-stat-icon.approved {
-  background: #e0f6e9;
+  /* background: #e0f6e9; */
   color: #21844a;
 }
 
@@ -223,24 +223,24 @@
   display: inline-block;
   padding: 6px 10px;
   border-radius: 20px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 700;
 }
 
 .supplier-status.approved {
   color: #21844a;
-  background: #e0f6e9;
+  /* background: #e0f6e9; */
 }
 
 .supplier-status.pending {
   color: #b77910;
-  background: #fff1d9;
+  /* background: #fff1d9; */
 }
 
 .supplier-status.rejected,
 .supplier-status.blocked {
   color: #c13f43;
-  background: #ffebeb;
+  /* background: #ffebeb; */
 }
 
 .supplier-actions {
@@ -316,4 +316,33 @@
   .supplier-search {
     width: 100%;
   }
+}
+
+/* * modal */
+.supplier-Modal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+    box-shadow: 0px 0px 10px rgb(227, 225, 225);
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+.supplier-Modal button{
+    height: 38px;
+    width: 140px;
+    border: none;
+    background-color: darkslategray;
+    color: white;
+    font-size: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.supplier-Modal button:hover{
+    background-color: #1b5069;
 }
