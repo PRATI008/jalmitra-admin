@@ -346,3 +346,32 @@
 .supplier-Modal button:hover{
     background-color: #1b5069;
 }
+.supplier-input{
+  display: block;
+}
+.supplier-input input{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid darkslategray;
+  margin-top: 10px;
+  padding: 10px;
+}
+.supplier-input label{
+  margin-top: 10px;
+  font-size: 18px;
+  color: darkslategray;
+}
+
+.supplier-add-btn{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #064e49;
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
