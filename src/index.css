@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #0A8FDA;
+  --primary-hover: #0879ba;
+  --primary-light: #EBF7FE;
+  --dark: #12314D;
+  --dark-hover: #1e4569;
+  --text-main: #183854;
+  --text-muted: #647d96;
+  --bg-page: #F4F8FC;
+  --card-bg: #FFFFFF;
+  --border-color: #E2ECF5;
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #edf3f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #c2d8e9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+
+/* Bootstrap Overrides for Admin Theme */
+.modal-content {
+  border: 1px solid #e1ebf4;
+  border-radius: 20px;
+  box-shadow: 0 16px 40px rgba(18, 49, 77, 0.12);
+  overflow: hidden;
+}
+
+.modal-header {
+  background: #f8fbfe;
+  border-bottom: 1px solid #edf4fa;
+  padding: 18px 24px;
+}
+
+.modal-body {
+  padding: 24px;
+}
+
+.modal-backdrop.show {
+  opacity: 0.35;
+}
+
+.form-control, .form-select {
+  border-radius: 10px;
+  border: 1px solid #dce7f2;
+  font-size: 13.5px;
+  padding: 9px 13px;
+  color: #12314d;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(10, 143, 218, 0.12);
+}
